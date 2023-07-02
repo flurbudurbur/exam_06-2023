@@ -1,0 +1,98 @@
+/* This code is used for devices smaller than 700px wide */
+@media only screen and (max-width: 1000px) {
+  /* To display the prices */
+  .prices {
+    background-color: #fdd9bf;
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px auto;
+    box-sizing: border-box;
+  }
+  .prices h1 {
+    margin-top: -45px;
+  }
+  /* To position the image */
+  .prices img {
+    width: 200px;
+    position: absolute;
+    left: calc(50vw + 100px);
+    margin-top: -100px;
+  }
+  .container h1 {
+    margin-top: -45px;
+    margin-bottom: 20px;
+  }
+  /* To position the text that indicates the day */
+  .day {
+    border-bottom: #edc9af solid 4px;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  /* To position the image */
+  .container img {
+    width: 200px;
+    position: absolute;
+    left: calc(50vw - 320px);
+    margin-top: -60px;
+  }
+  /* To make sure that it does not stick to the footer */
+  .marginbottom {
+    margin-bottom: 100px;
+  }
+}
+/* This code is used for devices wider than 700px wide */
+@media only screen and (min-width: 1000px) {
+  /* To make sure that the articles appear next to each other */
+  .nextto {
+    display: flex;
+  }
+  /* To display the prices */
+  .prices {
+    background-color: #fdd9bf;
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px auto;
+    box-sizing: border-box;
+  }
+  .prices h1 {
+    margin-top: -45px;
+  }
+  /* To position the image */
+  .prices img {
+    width: 200px;
+    position: absolute;
+    left: calc(25vw + 100px);
+    margin-top: -100px;
+  }
+  .container h1 {
+    margin-top: -45px;
+    margin-bottom: 20px;
+  }
+  /* To position the text that indicates the day */
+  .day {
+    border-bottom: #edc9af solid 4px;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  /* To position the image */
+  .container img {
+    width: 200px;
+    position: absolute;
+    left: calc(75vw + 100px);
+    margin-top: -50px;
+  }
+}
+.row {
+  display: flex;
+}
+.reserveContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}

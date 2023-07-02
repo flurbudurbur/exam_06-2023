@@ -1,0 +1,182 @@
+/* This code is used for devices smaller than 700px wide */
+@media only screen and (max-width: 700px) {
+  /* To give the background the right size */
+  .achtergrond {
+    width: 100%;
+    position: relative;
+    border-bottom: #e5be01 solid 30px;
+  }
+  /* To give the logo the right size */
+  .logo {
+    width: 15%;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+  }
+  /* To make the drop down menu work */
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 40px;
+    right: 60px;
+    width: 15%;
+  }
+  .dropdown img {
+    width: 100%;
+    right: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e5be01;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    right: 0px;
+    z-index: 11;
+    color: black;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    padding: 4px;
+    margin: 8px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .dropdown-content a:hover {
+    background-color: #e5be01;
+    border-radius: 2px;
+  }
+}
+/* This code is used for devices wider than 700px wide */
+@media only screen and (min-width: 700px) {
+  /* To give the background the right size */
+  .achtergrond {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    object-fit: none;
+    border-bottom: #e5be01 solid 30px;
+  }
+  /* To give the logo the right size */
+  .logo {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+  /* To make sure there is no drop down menu */
+  .dropdown img {
+    display: none;
+  }
+  /* To position the buttons for navigating the site */
+  .dropdown-content {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    width: 70vw;
+  }
+  .dropdown-content a {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+    margin: 4px;
+  }
+  /* To color the button when hovering */
+  .dropdown-content a:hover {
+    background-color: #e5be01;
+  }
+  /* To color the button when active */
+  .active {
+    background-color: #e5be01;
+  }
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #edc9af;
+  margin-top: 5%;
+  border-top: 1px solid black;
+}
+.column {
+  flex: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
+.column p,
+h3 {
+  text-align: justify;
+  margin-left: 13.33%;
+  margin-top: 3%;
+}
+@media only screen and (max-width: 520px) {
+  .column p,
+  h3 {
+    text-align: justify;
+    margin-left: 5.33%;
+    margin-top: 3%;
+  }
+}
+.column > p.text {
+  text-align: initial;
+}
+.madeby {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 75%;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #edc9af;
+  margin-top: 5%;
+  border-top: 1px solid black;
+}
+.column {
+  flex: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
+.column p,
+h3 {
+  text-align: justify;
+  margin-left: 13.33%;
+  margin-top: 3%;
+}
+@media only screen and (max-width: 520px) {
+  .column p,
+  h3 {
+    text-align: justify;
+    margin-left: 5.33%;
+    margin-top: 3%;
+  }
+}
+
+.column > p.text {
+  text-align: initial;
+}
+.madeby {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 75%;
+}
