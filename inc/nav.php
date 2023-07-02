@@ -13,11 +13,11 @@
     <?php
     if (isset($_SESSION['loggedIn'])) {
     ?>
-      <a href="./beheer<?php if ($_SESSION['employee'] == 1) {
-                          echo 'medewerker';
+      <a href="<?php if ($_SESSION['employee'] == 1) {
+                          echo './beheermedewerker.php';
                         } else {
-                          echo 'klant';
-                        } ?>.php" <?php if ($activePage == "reservatiebeheer") echo 'class="active"'; ?>>Reservatiebeheer</a>
+                          echo './beheerklant.php';
+                        } ?>" <?php if ($activePage == "reservatiebeheer") echo 'class="active"'; ?>>Reservatiebeheer</a>
     <?php
     }
     ?>

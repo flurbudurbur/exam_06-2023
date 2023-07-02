@@ -26,6 +26,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['loggedIn'] = true;
         $_SESSION['displayname'] = $fname;
         $_SESSION['accountId'] = $data['accounts_id'];
+        $_SESSION['employee'] = "0";
         header("Location: ../../index.php");
         exit;
     } else {

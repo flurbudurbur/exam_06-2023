@@ -16,22 +16,19 @@ foreach ($data as $key => $value) {
     }
 }
 $people = $data['adult'] . '-' . $data['child'];
+$randomScores = json_encode(scoreGen());
 
-$sql = "INSERT INTO `reservervaties` (`reservations_account`, `reservations_date`, `reservations_timeslot`, `reservations_options`, `reservations_partysize`) VALUES ('" . $_SESSION['accountId'] . "', '" . $data['selectedDate'] . "', '" . $data['time'] . "', '" . $data['options'] . "', '" . $people . "')";
+$sql = "INSERT INTO `reservaties` (`reservations_account`, `reservations_date`, `reservations_timeslot`, `reservations_options`, `reservations_partysize`, `reservations_data`) VALUES ('" . $_SESSION['accountId'] . "', '" . $data['selectedDate'] . "', '" . $data['time'] . "', '" . $data['options'] . "', '" . $people . "', '" . $randomScores . "')";
 $result = mysqli_query($conn, $sql);
-
-echo $result;
-var_dump($result);
-die();
 
 if ($result) {
     $_SESSION['reservationSuccess'] = "Reservation has been made.";
-    // header("Location: ../../beheerklant.php");
-    // exit;
+    header("Location: ../../beheerklant.php");
+    exit;
 } else {
     $_SESSION['reservationError'] = "Something went wrong.";
-    // header("Location: ../../reserveren.php");
-    // exit;
+    header("Location: ../../reserveren.php");
+    exit;
 }
 
 

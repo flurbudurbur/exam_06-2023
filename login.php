@@ -30,15 +30,15 @@ require_once 'php/inc/functions.php';
             <form action="php/inc/login.php" method="post">
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="Voer uw e-mailadres in" required>
+                    <input class="credentials" type="email" id="email" name="email" placeholder="Voer uw e-mailadres in" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Wachtwoord:</label>
-                    <input type="password" id="password" name="password" placeholder="Voer uw wachtwoord in" required>
+                    <input class="credentials" type="password" id="password" name="password" placeholder="Voer uw wachtwoord in" required>
                 </div>
                 <br>
                 <br>
-                <button type="submit">Inloggen</button>
+                <button class="submitbtn" type="submit">Inloggen</button>
                 <br>
                 <hr>
                 <br>

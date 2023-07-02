@@ -50,17 +50,17 @@ if (!isset($_SESSION['loggedIn'])) {
                 <div class="form-control guests">
                     <input type="hidden" name="accountID" value="<?php echo $accountID; ?>">
                     <label for="adult">Volwassen:</label>
-                    <input id="adultInput" type="number" name="adult" value="0" min="0">
+                    <input id="adultInput" type="number" name="adult" value="1" min="1">
                     <label for="child">Kinderen t/m 12 jaar:</label>
-                    <input id="childInput" type="number" name="child" value="0">
+                    <input id="childInput" type="number" name="child" value="0" min="0">
                     <label for="hekjes" class="hekjes" style="display:none;" min="0">kinderhekjes:</label>
                     <input id="railsInput" type="checkbox" name="hekjes" class="hekjes" value="false">
                     <label for="room">Banen:</label>
-                    <input id="trackInput" type="text" disabled value="1">
+                    <input id="trackInput" type="number" value="1" min="1" max="8">
                     <label for="date" class="dateSelector">Datum van</label>
                     <label for="date" class="dateSelector">tot</label>
                     <input id="startDateInput" type="date" name="startdate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>">
-                    <input id="endDateInput" type="date" name="enddate" value="<?php echo date('Y-m-d', strtotime("+1 week")); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime("+2 weeks")); ?>">
+                    <input id="endDateInput" type="date" name="enddate" value="<?php echo date('Y-m-d', strtotime("+1 day")); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime("+2 weeks")); ?>">
                     <h2>Extra opties</h2>
                     <div class="row">
                         <label for="child">Snacks:</label>
@@ -83,9 +83,9 @@ if (!isset($_SESSION['loggedIn'])) {
                     <input id="selectedDate" type="date" name="selectedDate" value="<?php echo date('Y-m-d'); ?>" hidden>
                     <input type="submit" value="Reserveer" class="span2">
                 </div>
+                <div class="reserveContainer" id="data"></div>
             </form>
 
-            <div class="reserveContainer" id="data"></div>
             <script>
                 addAllEventListeners();
                 ajaxStringify();

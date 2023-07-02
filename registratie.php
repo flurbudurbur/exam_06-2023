@@ -30,31 +30,31 @@ require_once 'php/inc/functions.php';
             <form action="php/inc/register.php" method="post">
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="Voer uw e-mailadres in" required>
+                    <input class="credentials" type="email" id="email" name="email" placeholder="Voer uw e-mailadres in" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Wachtwoord:</label>
-                    <input type="password" id="password" name="password" placeholder="Voer uw wachtwoord in" required>
+                    <input class="credentials" type="password" id="password" name="password" placeholder="Voer uw wachtwoord in" required>
                 </div>
                 <div class="form-group">
                     <label for="passwordConfirm">Herhaal wachtwoord:</label>
-                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Herhaal uw wachtwoord" required>
+                    <input class="credentials" type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Herhaal uw wachtwoord" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefoonnummer:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Voer uw telefoonnummer in" required>
+                    <input class="credentials" type="tel" id="phone" name="phone" placeholder="Voer uw telefoonnummer in" required>
                 </div>
                 <div class="form-group">
                     <label for="firstname">Voornaam:</label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Voer uw voornaam in" required>
+                    <input class="credentials" type="text" id="firstname" name="firstname" placeholder="Voer uw voornaam in" required>
                 </div>
                 <div class="form-group">
                     <label for="lastname">Achternaam:</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Voer uw achternaam in" required>
+                    <input class="credentials" type="text" id="lastname" name="lastname" placeholder="Voer uw achternaam in" required>
                 </div>
                 <br>
                 <br>
-                <button type="submit">Registreren</button>
+                <button class="submitbtn" type="submit">Registreren</button>
             </form>
         </div>
     </div>
